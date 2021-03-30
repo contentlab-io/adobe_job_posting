@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+
+  form(action="/upload", enctype="multipart/form-data", method="POST")
+    label Job posting name:&nbsp;
+    input(type="text", name="name", required="required")
+    br
+    br
+    label Attached document:&nbsp;
+    input(type="file", name="attachment", required="required")
+    br
+    br
+    input(type="submit", value="Submit job posting")

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= name
+  div(id='adobe-dc-view')
+  script(src='https://documentcloud.adobe.com/view-sdk/main.js')
+  script.
+    window.embedUrl = "!{pdf_url}";
+  script(src='/javascripts/embed-pdf.js')
